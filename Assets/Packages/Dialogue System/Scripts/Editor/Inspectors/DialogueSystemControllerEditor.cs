@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 
 namespace PixelCrushers.DialogueSystem
 {
-
     /// <summary>
     /// Custom inspector editor for DialogueSystemController (e.g., Dialogue Manager).
     /// </summary>

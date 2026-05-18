@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 using System.Text;
 using System.Collections;
@@ -184,6 +185,7 @@ namespace PixelCrushers.DialogueSystem
 
         private int MaxSafeguard = 16384;
 
+        [Obsolete("Obsolete")]
         public void Awake()
         {
             control = GetComponent<UnityEngine.UI.Text>();
@@ -201,6 +203,7 @@ namespace PixelCrushers.DialogueSystem
             }
         }
 
+        [Obsolete("Obsolete")]
         private void RemoveIfDuplicate()
         {
             var effects = GetComponents<UnityUITypewriterEffect>();

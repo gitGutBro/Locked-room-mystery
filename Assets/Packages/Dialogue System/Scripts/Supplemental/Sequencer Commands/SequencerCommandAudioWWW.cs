@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -70,6 +71,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
             }
         }
 
+        [Obsolete("Obsolete")]
         public void Update()
         {
             switch (state)
@@ -86,6 +88,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
             }
         }
 
+        [Obsolete("Obsolete")]
         private void LoadNextAudio()
         {
             if (audioURLs.Count > 0)

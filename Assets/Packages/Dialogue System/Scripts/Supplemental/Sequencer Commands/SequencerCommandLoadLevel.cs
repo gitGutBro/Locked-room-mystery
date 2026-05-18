@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace PixelCrushers.DialogueSystem.SequencerCommands
 {
-
     /// <summary>
     /// This script implements the sequencer command LoadLevel(levelName).
     /// Before loading the level, it calls PersistentDataManager.Record() to
@@ -15,7 +15,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
     [AddComponentMenu("")] // Hide from menu.
     public class SequencerCommandLoadLevel : SequencerCommand
     {
-
+        [Obsolete("Obsolete")]
         public void Start()
         {
             string levelName = GetParameter(0);

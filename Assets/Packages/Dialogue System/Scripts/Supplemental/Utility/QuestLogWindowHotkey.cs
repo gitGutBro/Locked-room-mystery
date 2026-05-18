@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using PixelCrushers.DialogueSystem;
 
 namespace PixelCrushers.DialogueSystem
@@ -17,6 +18,7 @@ namespace PixelCrushers.DialogueSystem
         [Tooltip("Use this quest log window. If unassigned, will automatically find quest log window in scene.")]
         public QuestLogWindow questLogWindow;
 
+        [Obsolete("Obsolete")]
         void Awake()
         {
             if (questLogWindow == null) questLogWindow = FindObjectOfType<QuestLogWindow>();
@@ -31,7 +33,5 @@ namespace PixelCrushers.DialogueSystem
                 if (questLogWindow.IsOpen) questLogWindow.Close(); else questLogWindow.Open();
             }
         }
-
     }
-
 }

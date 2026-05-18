@@ -12,6 +12,7 @@ namespace PixelCrushers.DialogueSystem
         /// <summary>
         /// Ensures that the scene has an EventSystem.
         /// </summary>
+        [Obsolete("Obsolete")]
         public static void RequireEventSystem()
         {
             var eventSystem = GameObject.FindObjectOfType<UnityEngine.EventSystems.EventSystem>();
@@ -99,7 +100,5 @@ namespace PixelCrushers.DialogueSystem
                 selectable.OnSelect(null);
             }
         }
-
     }
-
 }

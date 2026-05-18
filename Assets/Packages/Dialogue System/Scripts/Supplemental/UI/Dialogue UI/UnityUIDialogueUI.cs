@@ -1,9 +1,9 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
 namespace PixelCrushers.DialogueSystem
 {
-
     /// <summary>
     /// This component implements IDialogueUI using Unity UI. It's based on 
     /// AbstractDialogueUI and compiles the Unity UI versions of the controls defined in 
@@ -27,7 +27,6 @@ namespace PixelCrushers.DialogueSystem
     [AddComponentMenu("Dialogue System/UI/Unity UI/Dialogue/Unity UI Dialogue UI")]
     public class UnityUIDialogueUI : AbstractDialogueUI
     {
-
         /// <summary>
         /// The UI root.
         /// </summary>
@@ -133,6 +132,7 @@ namespace PixelCrushers.DialogueSystem
         /// <summary>
         /// Sets up the component.
         /// </summary>
+        [Obsolete("Obsolete")]
         public override void Awake()
         {
             base.Awake();
@@ -142,12 +142,14 @@ namespace PixelCrushers.DialogueSystem
         }
 
 #if !(UNITY_4_3 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5_3)
+        [Obsolete("Obsolete")]
         public virtual void OnEnable()
         {
             UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
             UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
+        [Obsolete("Obsolete")]
         public virtual void OnDisable()
         {
             UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -157,6 +159,7 @@ namespace PixelCrushers.DialogueSystem
         /// <summary>
         /// Logs warnings if any critical controls are unassigned.
         /// </summary>
+        [Obsolete("Obsolete")]
         private void FindControls()
         {
             if (addEventSystemIfNeeded) UITools.RequireEventSystem();
@@ -192,6 +195,7 @@ namespace PixelCrushers.DialogueSystem
             UITools.RequireEventSystem();
         }
 #else
+        [Obsolete("Obsolete")]
         public void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
         {
             UITools.RequireEventSystem();
@@ -411,7 +415,5 @@ namespace PixelCrushers.DialogueSystem
         }
 
         #endregion
-
     }
-
 }

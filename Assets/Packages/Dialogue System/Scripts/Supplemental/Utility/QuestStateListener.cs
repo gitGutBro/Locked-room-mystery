@@ -62,6 +62,7 @@ namespace PixelCrushers.DialogueSystem
         private QuestStateIndicator m_questStateIndicator;
         private bool m_started = false;
 
+        [Obsolete("Obsolete")]
         void Awake()
         {
             m_questStateDispatcher = FindObjectOfType<QuestStateDispatcher>();

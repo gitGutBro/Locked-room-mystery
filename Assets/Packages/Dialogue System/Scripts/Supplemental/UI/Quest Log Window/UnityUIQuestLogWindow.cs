@@ -121,6 +121,7 @@ namespace PixelCrushers.DialogueSystem
         /// <summary>
         /// Hide the main panel and all of the templates on start.
         /// </summary>
+        [Obsolete("Obsolete")]
         public virtual void Start()
         {
             UITools.RequireEventSystem();
@@ -522,8 +523,6 @@ namespace PixelCrushers.DialogueSystem
         {
             CloseAbandonPopup();
         }
-
     }
-
 }
 #endif
