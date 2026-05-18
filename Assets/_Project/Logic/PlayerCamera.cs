@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Project.Logic
 {
@@ -8,23 +9,24 @@ namespace _Project.Logic
     {
         private const float MinRotate = -90f;
         private const float MaxRotate = 90f;
-        
+
         [SerializeField] private float _sensitivity;
-        [SerializeField] private Transform _transform;
-        
+
+        [field: SerializeField] public Transform Transform { get; private set; }
+
         private float _yaw;
         private float _pitch;
 
-        private void Start() => 
+        private void Start() =>
             Cursor.lockState = CursorLockMode.Locked;
 
-        private void LateUpdate() => 
-            _transform.rotation = Quaternion.Euler(_pitch, _yaw, 0f);
+        private void LateUpdate() =>
+            Transform.rotation = Quaternion.Euler(_pitch, _yaw, 0f);
 
         private void OnValidate()
         {
-            if (_transform == null)
-                _transform = GetComponent<Transform>();
+            if (Transform == null)
+                Transform = GetComponent<Transform>();
         }
 
         public void OnLook(Vector2 look)
