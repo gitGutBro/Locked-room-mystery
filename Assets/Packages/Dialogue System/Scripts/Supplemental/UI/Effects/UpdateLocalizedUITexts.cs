@@ -1,4 +1,5 @@
 ﻿#if !(UNITY_4_3 || UNITY_4_5)
+using System;
 using UnityEngine;
 using System.Collections;
 using PixelCrushers.DialogueSystem;
@@ -27,6 +28,7 @@ namespace PixelCrushers.DialogueSystem
         /// </summary>
         public string languagePlayerPrefsKey = "Language";
 
+        [Obsolete("Obsolete")]
         IEnumerator Start()
         {
             yield return null; // Wait for Text components to start.
@@ -46,6 +48,7 @@ namespace PixelCrushers.DialogueSystem
         /// Updates the current language and all localized Texts.
         /// </summary>
         /// <param name="languageCode">Language code.</param>
+        [Obsolete("Obsolete")]
         public void UpdateTexts(string languageCode)
         {
             if (DialogueDebug.LogInfo) Debug.Log(DialogueDebug.Prefix + ": Setting language to '" + languageCode + "'.", this);
