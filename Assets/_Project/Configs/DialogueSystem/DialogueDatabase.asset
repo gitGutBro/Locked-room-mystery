@@ -240,8 +240,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 379
-        y: 296
+        x: 379.7353
+        y: 296.7353
         width: 160
         height: 30
     - id: 1
@@ -460,7 +460,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 494.34592
-        y: 448.56824
+        y: 449.30353
         width: 160
         height: 30
     - id: 4
@@ -486,11 +486,11 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: 
+        value: We did first try
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Is it your first time?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -525,13 +525,13 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 261.6447
-        y: 535.7842
+        y: 536.51953
         width: 160
         height: 30
     - id: 5
       fields:
       - title: Title
-        value: New Dialogue Entry
+        value: Second Anna answer
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
@@ -551,11 +551,11 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: 
+        value: We did second try
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Is it your second answer?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -593,8 +593,8 @@ MonoBehaviour:
         y: 535.8097
         width: 160
         height: 30
-    canvasScrollPosition: {x: 174.5229, y: 252.4361}
-    canvasZoom: 1.4499996
+    canvasScrollPosition: {x: 158.17976, y: 229.11919}
+    canvasZoom: 1.3599997
   syncInfo:
     syncActors: 0
     syncItems: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4464569354160782307}
   - component: {fileID: 1884972747443988101}
   - component: {fileID: 1829470014641644453}
+  - component: {fileID: 3504614534502030664}
   m_Layer: 0
   m_Name: Anna
   m_TagString: Untagged
@@ -112,3 +113,56 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3504614534502030664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577298338011061847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1185165055, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: DialogueSystem.dll::PixelCrushers.DialogueSystem.DialogueSystemTrigger
+  once: 0
+  trigger: 16
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  exclusive: 0
+  conversation: "\u258CTest Conversation"
+  conversationConversant: {fileID: 8730159848129692999}
+  conversationActor: {fileID: 8610539988822270391, guid: d0234109d8ea75546876a91c29c31bf4, type: 3}
+  skipIfNoValidEntries: 0
+  stopConversationOnTriggerExit: 0
+  barkConversation: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  luaCode: 
+  alertMessage: 
+  localizedTextTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: af48899434996264cb9f2838d1b61e8b, type: 2}
