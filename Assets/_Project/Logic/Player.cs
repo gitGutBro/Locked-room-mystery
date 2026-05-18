@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace _Project.Logic
@@ -7,11 +6,15 @@ namespace _Project.Logic
     internal class Player : MonoBehaviour
     {
         [SerializeField] private CharacterControllerService _characterController;
+        [SerializeField] private PlayerCamera _playerCamera;
         
         private NewInputService _inputService;
 
-        private void Awake() => 
+        private void Awake()
+        {
             _inputService = new NewInputService();
+            _inputService.Look += _playerCamera.OnLook;
+        }
 
         private void Update()
         {
@@ -20,7 +23,13 @@ namespace _Project.Logic
             _characterController.Move(input);
         }
 
-        private void OnDestroy() => 
-            _inputService?.Dispose();
+        private void OnDestroy()
+        {
+            if (_inputService == null)
+                return;
+            
+            _inputService.Look -= _playerCamera.OnLook;
+            _inputService.Dispose();
+        }
     }
 }
