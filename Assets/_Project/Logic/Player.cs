@@ -18,9 +18,23 @@ namespace _Project.Logic
 
         private void Update()
         {
+            Vector3 moveDirection = GetMoveDirection();
+
+            _characterController.Move(moveDirection);
+        }
+
+        private Vector3 GetMoveDirection()
+        {
             Vector2 input = _inputService.Moved;
-            
-            _characterController.Move(input);
+
+            Vector3 forward = _playerCamera.Transform.forward;
+            Vector3 right = _playerCamera.Transform.right;
+            forward.y = 0f;
+            right.y = 0f;
+            forward.Normalize();
+            right.Normalize();
+
+            return (forward * input.y + right * input.x).normalized;
         }
 
         private void OnDestroy()
