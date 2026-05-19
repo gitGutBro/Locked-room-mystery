@@ -9,10 +9,7 @@ namespace _Project.Logic
         [SerializeField] private float _speed;
         [SerializeField] private CharacterController _controller;
 
-        public void Move(Vector2 input)
-        {
-            Vector3 direction = new Vector3(input.x, 0, input.y).normalized;
+        public void Move(Vector3 direction) => 
             _controller.Move(direction * (_speed * Time.deltaTime));
-        }
     }
 }
