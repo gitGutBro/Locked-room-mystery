@@ -8,7 +8,8 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands
     /// <summary>
     /// Implements sequencer command: AudioWWW(url,...)
     /// </summary>
-    [AddComponentMenu("")] // Hide from menu.
+    [AddComponentMenu("")]
+    [Obsolete("Obsolete")] // Hide from menu.
     public class SequencerCommandAudioWWW : SequencerCommand
     {
 
